@@ -13,6 +13,7 @@
 
 namespace TSEOS {
     void loaddata(const char* filename, data_t& data){
+        std::ifstream file(filename);
         return;
     }
 }
