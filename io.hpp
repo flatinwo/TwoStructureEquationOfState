@@ -13,7 +13,7 @@
 #include "struct_def.h"
 
 namespace TSEOS {
-    void loaddata(const char* filename, data_t& data);
+    void loaddata(const char* filepath, data_t& data, filelist_t& files);
 }
 
 #endif /* io_hpp */

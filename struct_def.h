@@ -23,11 +23,12 @@ namespace TSEOS {
     struct property_t{
         double property;
         double uncertainty;
-        std::string datatype;
-        std::string units;
+        std::string type;
+        std::string source;
     };
     
-    typedef std::map<state_pt_t,property_t> data_t;
+    typedef std::vector< std::pair <state_pt_t,property_t> > data_t;
+    typedef std::vector<std::string> filelist_t;
 
 }
 
