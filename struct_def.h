@@ -27,6 +27,7 @@ namespace TSEOS {
         std::string source;
     };
     
+    typedef std::pair<state_pt_t,property_t> data_pt;
     typedef std::vector< std::pair <state_pt_t,property_t> > data_t;
     typedef std::vector<std::string> filelist_t;
 
