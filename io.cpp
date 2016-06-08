@@ -41,6 +41,21 @@ namespace TSEOS {
             }
             else std::cerr << datafilename << " cannot be found\n";
         }
+        analyzedata(data);
         return;
     }
+    
+    void analyzedata(data_t& data){
+        for (auto& i: data ) {
+            if (i.second.type.find("density") != std::string::npos) i.second.typenum = DataType::DENSITY;
+            else if (i.second.type.find("volume") != std::string::npos) i.second.typenum = DataType::VOLUME;
+            else if (i.second.type.find("compressibility") != std::string::npos) i.second.typenum = DataType::COMPRESSIBILITY;
+            else if (i.second.type.find("expansivity") != std::string::npos) i.second.typenum = DataType::EXPANSIVITY;
+            else if (i.second.type.find("Cp") != std::string::npos) i.second.typenum = DataType::HEATCAPACITY_P;
+            else if (i.second.type.find("Cv") != std::string::npos) i.second.typenum = DataType::HEATCAPACITY_V;
+            else if (i.second.type.find("Cs") != std::string::npos) i.second.typenum = DataType::SPEEDOFSOUND;
+            else i.second.typenum = DataType::JUNK;
+        }
+    }
+    
 }

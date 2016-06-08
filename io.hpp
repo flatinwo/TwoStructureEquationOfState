@@ -14,6 +14,7 @@
 
 namespace TSEOS {
     void loaddata(const char* filepath, data_t& data, filelist_t& files);
+    void analyzedata(data_t& data);
 }
 
 #endif /* io_hpp */

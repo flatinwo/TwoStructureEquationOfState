@@ -26,6 +26,7 @@ namespace TSEOS {
     struct xparams{
         double LL; //-ln K
         double WW; //chi parameter
+        double t; //temperature
     };
 }
 

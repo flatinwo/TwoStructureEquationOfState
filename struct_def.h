@@ -15,6 +15,9 @@
 #include <string>
 
 namespace TSEOS {
+    
+    enum DataType {DENSITY, VOLUME, HEATCAPACITY_P, COMPRESSIBILITY, EXPANSIVITY, HEATCAPACITY_V, SPEEDOFSOUND, JUNK};
+    
     struct state_pt_t{
         double temperature;
         double pressure;
@@ -25,6 +28,7 @@ namespace TSEOS {
         double uncertainty;
         std::string type;
         std::string source;
+        DataType typenum; //maybe use a union here
     };
     
     typedef std::pair<state_pt_t,property_t> data_pt;
